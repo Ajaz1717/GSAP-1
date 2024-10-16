@@ -1,3 +1,12 @@
+window.onloadTurnstileCallback = function () {
+  turnstile.render("#myWidget", {
+    sitekey: "0x4AAAAAAAxlsJ2GKaewKvt3",
+    callback: function (token) {
+      console.log(`Challenge Success ${token}`);
+    },
+  });
+};
+
 gsap.from('#box1', {
   x: -160,
   borderRadius: "50%",
